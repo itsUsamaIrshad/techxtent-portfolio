@@ -1,0 +1,144 @@
+.navbar-section,
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+  background: white;
+  width: 100%;
+  box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.45);
+  z-index: 1000;
+}
+
+.logoDiv .logo .icon {
+  width: 90%;
+  max-width: 100%;
+  height: 70px;
+}
+
+@media (max-width: 768px) {
+  .navBar {
+    background: white;
+    position: absolute;
+    margin-top: 1rem;
+    padding: 1rem;
+    width: 100%;
+    min-height: 100vh;
+    left: -500%;
+    box-shadow: 0 2px 4px rgba(209, 209, 209, 0.904);
+    transition: 0.5s ease;
+    z-index: 1000;
+  }
+
+  .header {
+    padding: 1rem 1rem 0rem 2rem !important;
+    margin-top: 3rem;
+  }
+
+  .navLists {
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+  }
+
+  .navItem {
+    margin: 2rem 0;
+  }
+
+  .headerBtns {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .headerBtns .btn {
+    margin-top: 1rem;
+  }
+
+  .headerBtns .btn a {
+    font-weight: 600;
+  }
+
+  .headerBtns .btn a:hover {
+    color: #2ec4b6;
+  }
+
+  .closeNavbar {
+    position: absolute;
+    top: 2rem;
+
+    right: 1rem;
+    color: black;
+  }
+
+  .icon {
+    font-size: 1.5rem;
+  }
+
+  .activeNavbar {
+    top: 0;
+    left: 0;
+  }
+  .headerBtns {
+    display: none;
+  }
+
+  .toggleNavbar:hover,
+  .closeNavbar:hover {
+    color: #2ec4b6;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 769px) {
+  .navbar-section .toggleNavbar,
+  .closeNavbar {
+    display: none;
+  }
+
+  .header {
+    padding: 0rem 1rem 0rem 2rem !important;
+    margin-top: 4rem;
+  }
+
+  .header .navBar .navLists {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .navLists .btn {
+    margin-left: 1rem;
+  }
+
+  .btn a {
+    color: black;
+    font-weight: 500;
+  }
+
+  .headerBtns .contactBtn {
+    padding: 0.8rem 1rem;
+    outline: 0;
+    color: white;
+    border: 0;
+    border-radius: 0.5rem;
+    background-color: #2ec4b6;
+    transition: all 300ms ease-in;
+  }
+
+  .headerBtns .contactBtn:hover {
+    transform: scale(1.1);
+  }
+
+  .header .navBar .navLists .navItem {
+    margin: 0 0.7rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    padding: 1rem 3.5rem;
+  }
+}
